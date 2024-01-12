@@ -1,0 +1,47 @@
+<div>
+  <p>Check current weather data</p>
+  <app-search-cities (WeatherDetail)="GetWeatherDetail($event)" [FromWeatherDetail]="true"></app-search-cities>
+  <div *ngIf="weatherData" class="home-container">
+    <button (click)="AddToFavourites(weatherData.name); isButtonClicked = true"
+    [ngClass]="{ clicked: isButtonClicked }">Add to favourites <i class="fa-regular fa-heart"></i></button>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>City Name:</th>
+          <td>{{ weatherData.name }}</td>
+        </tr>
+        <tr>
+          <th>Country:</th>
+          <td>{{ weatherData.sys.country }}</td>
+        </tr>
+        <tr>
+          <th>Current temperature:</th>
+          <td>{{ weatherData.main.temp | temperatureConvert | temperatureRound}}°</td>
+        </tr>
+        <tr>
+          <th>Feels Like:</th>
+          <td>{{ weatherData.main.feels_like | temperatureConvert | temperatureRound}}°</td>
+        </tr>
+        <tr>
+          <th><img src="https://openweathermap.org/img/wn/{{ weatherData.weather[0].icon }}@2x.png">:</th>
+          <td>{{ weatherData.weather[0].description }}</td>
+        </tr>
+        <tr>
+          <th>Max temperature:</th>
+          <td>{{ weatherData.main.temp_max | temperatureConvert | temperatureRound}}°</td>
+        </tr>
+        <tr>
+          <th>Min temperature:</th>
+          <td>{{ weatherData.main.temp_min | temperatureConvert | temperatureRound }}°</td>
+        </tr>
+        <tr>
+          <th>Humidity:</th>
+          <td>{{ weatherData.main.humidity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="!cityFound">
+    <p>City not found!</p>
+  </div>
+</div>

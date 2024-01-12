@@ -1,0 +1,73 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 3px;
+  padding: 3px;
+  color: #676d6e;
+  font-family: "Calibri", calibri;
+  margin-top: 50px;
+  text-align: center;
+}
+
+img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+thead th {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 3px;
+  padding: 3px;
+  color: #676d6e;
+  font-family: "Calibri", calibri;
+  margin-top: 50px;
+  text-align: center;
+}
+
+tbody td {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 3px;
+  padding: 3px;
+  color: #676d6e;
+  font-family: "Calibri", calibri;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.table-fixed-header {
+  overflow: auto;
+  height: 550px;
+}
+
+.thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.city-not-found {
+  padding: 10px;
+}
+
+.div-padding {
+  padding: 20px;
+}
+
+table {
+  border: 1px solid #65bd81;
+  border-radius: 10px;
+}

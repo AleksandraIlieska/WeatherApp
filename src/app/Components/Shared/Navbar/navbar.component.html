@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent border mx-auto box">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fw-bold" aria-current="page" [routerLink]="['/home']"
+            routerLinkActive="active-tab">Home</a>
+        </li>
+        <li *ngIf="IsAuthenticated" class="nav-item fw-bold">
+          <a class="nav-link" aria-current="page" [routerLink]="['/weather']" routerLinkActive="active-tab">Current
+            Weather</a>
+        </li>
+        <li *ngIf="IsAuthenticated" class="nav-item">
+          <a class="nav-link fw-bold" [routerLink]="['/hourly']" routerLinkActive="active-tab">Forecast</a>
+        </li>
+        <li *ngIf="IsAuthenticated" class="nav-item">
+          <a class="nav-link fw-bold" [routerLink]="['/favourite']" routerLinkActive="active-tab">Favourite cities</a>
+        </li>
+        <li *ngIf="!IsAuthenticated" class="nav-item">
+          <a class="nav-link fw-bold" [routerLink]="['/login']" routerLinkActive="active-tab">Login</a>
+        </li>
+        <li *ngIf="!IsAuthenticated" class="nav-item">
+          <a class="nav-link fw-bold" [routerLink]="['/register']" routerLinkActive="active-tab">Register</a>
+        </li>
+        <li *ngIf="IsAuthenticated" class="nav-item">
+          <a class="nav-link fw-bold a-logout" routerLinkActive="active-tab" (click)="logoutUser()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

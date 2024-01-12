@@ -1,0 +1,76 @@
+.home-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 3px;
+    padding: 3px;
+    color: #676d6e;
+    font-family: "Calibri", calibri;
+    margin-top: 50px;
+    text-align: center;
+}
+
+td {
+    color: #676d6e;
+    font-family: "Calibri", calibri;
+}
+
+th {
+    color: #676d6e;
+    font-family: "Calibri", calibri;
+    font-weight: bold;
+}
+
+img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.add-to-favourites {
+    position: center;
+}
+
+.clicked-true {
+    color: red;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 25px;
+    position: center;
+}
+
+button {
+    width: 100%;
+    border: 1px solid #65bd81;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px;
+    outline: none;
+    color: #9dbfaf;
+    background: white;
+}
+
+table {
+    border: 1px solid #65bd81;
+    border-radius: 10px;
+}
+
+button.clicked {
+    background-color: #65bd81;
+    color: white;
+}
+
+button:hover {
+    background-color: #65bd81;
+}

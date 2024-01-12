@@ -1,0 +1,7 @@
+<div class="wrap">
+  <div class="search">
+    <span class="searchIcon"><i class="fas fa-search"></i></span>
+    <input type="text" class="searchTerm" placeholder="Enter city" #inputField (keyup)="OnKey(inputField.value)" />
+    <button class="searchButton" (click)="GetDetails()"></button>
+  </div>
+</div>

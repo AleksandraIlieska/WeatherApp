@@ -1,0 +1,104 @@
+<section class="h-100 gradient-form">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-6">
+                <div class="card rounded-3 text-black">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <div class="card-body p-md-8 mx-md-3">
+
+                                <div class="text-center">
+                                    <img src="../../../assets/Images/weatherapp-logo.jpg" alt="logo" />
+                                    <h4 class="mt-1 mb-5 pb-1">Register to Weather App</h4>
+                                </div>
+
+                                <form [formGroup]="registerForm" (ngSubmit)="submitDetails()">
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example22">First name</label>
+                                        <input type="first name" id="form2Example22" class="form-control"
+                                            formControlName="firstName" name="firstName" placeholder="" />
+                                    </div>
+                                    <small
+                                        *ngIf="RegisterFormControl['firstName'].invalid && (RegisterFormControl['firstName'].dirty || RegisterFormControl['firstName'].touched)">
+                                        <div *ngIf="RegisterFormControl['firstName'].errors?.['required']">First name is
+                                            required
+                                        </div>
+                                    </small>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example23">Last name</label>
+                                        <input type="lastame" id="form2Example23" class="form-control"
+                                            formControlName="lastName" name="lastName" placeholder="" />
+                                    </div>
+                                    <small
+                                        *ngIf="RegisterFormControl['lastName'].invalid && (RegisterFormControl['lastName'].dirty || RegisterFormControl['lastName'].touched)">
+                                        <div *ngIf="RegisterFormControl['lastName'].errors?.['required']">Last name is
+                                            required
+                                        </div>
+                                    </small>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example24">Email address</label>
+                                        <input type="email" id="form2Example24" class="form-control" name="email"
+                                            formControlName="email" name="email" placeholder="" />
+                                    </div>
+                                    <small
+                                        *ngIf="RegisterFormControl['email'].invalid && (RegisterFormControl['email'].dirty || RegisterFormControl['email'].touched)">
+                                        <div *ngIf="RegisterFormControl['email'].errors?.['required']">Email is
+                                            required
+
+                                        </div>
+                                        <div *ngIf="RegisterFormControl['email'].errors?.['email']">Email should be
+                                            valid.
+                                        </div>
+                                    </small>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example25">Password</label>
+                                        <input type="password" placeholder="" id="form2Example25" class="form-control"
+                                            formControlName="password" name="password" />
+                                    </div>
+                                    <small
+                                        *ngIf="RegisterFormControl['password'].invalid && (RegisterFormControl['password'].dirty || RegisterFormControl['password'].touched)">
+                                        <div *ngIf="RegisterFormControl['password'].errors?.['required']">Password is
+                                            required
+                                        </div>
+                                    </small>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example26">Confirm Password</label>
+                                        <input type="password" placeholder="" id="form2Example26" class="form-control"
+                                            formControlName="confirmPassword" name="confirmPassword" />
+                                    </div>
+                                    <small
+                                        *ngIf="RegisterFormControl['confirmPassword'].invalid && (RegisterFormControl['confirmPassword'].dirty || RegisterFormControl['confirmPassword'].touched)">
+                                        <div *ngIf="RegisterFormControl['confirmPassword'].errors?.['required']">Please
+                                            confirm password
+                                        </div>
+                                    </small>
+
+                                    <small *ngIf="registerForm.errors?.['passwordMismatch']">
+                                        Password should match
+                                    </small>
+
+                                    <div class="d-flex align-items-center justify-content-center pb-4">
+                                        <button type="submit" class="btn btn-outline-dark submit"
+                                            [disabled]="registerForm.invalid">Submit</button>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center pb-4">
+                                        <p class="mb-0 me-2">Already a member?</p>
+                                        <button type="button" class="btn login"
+                                            (click)="onButtonClickNavigate('/login')">Login
+                                            now</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

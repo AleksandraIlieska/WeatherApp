@@ -1,0 +1,10 @@
+body {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/056/313/587/large/somayachan-landscape1.jpg?1668961309") no-repeat center center fixed; 
+    padding: 50px;
+  }
+  
+  .active-tab {
+    border-bottom: 2px solid #65bd81;
+  }
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

@@ -1,0 +1,88 @@
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100% !important;
+        margin: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.col-lg-6 {
+    width: 100%;
+}
+
+.card {
+    border-color: #65bd81;
+}
+
+.col-xl-6 {
+    width: 400px;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+label,
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #676d6e;
+    font-family: "Calibri", calibri;
+}
+
+input {
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: "Calibri", calibri;
+    border-color: #65bd81;
+}
+
+h4 {
+    color: #676d6e;
+}
+
+.submit {
+    border: 1px solid #65bd81;
+    width: 500px;
+    height: 35px;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    background-color: #65bd81;
+    font-family: "Calibri", calibri;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.login {
+    width: 120px;
+    height: 35px;
+    outline: none;
+    color: #676d6e;
+    background: none;
+    font-family: "Calibri", calibri;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+small {
+    font-size: 13px;
+    color: red;
+    font-family: "Calibri", calibri;
+}
+
+.mb-4 {
+    margin-bottom: 0px !important;
+}
+
+label {
+    margin-top: 20px;
+}

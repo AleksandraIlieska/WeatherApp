@@ -1,0 +1,38 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 50px;
+  text-align: center;
+  font-family: "Calibri", calibri;
+}
+
+h4 {
+  color: #676d6e;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 3px;
+  padding: 3px;
+  color: #676d6e;
+  font-family: "Calibri", calibri;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 25px;
+  color: #676d6e;
+}

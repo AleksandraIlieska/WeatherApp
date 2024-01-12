@@ -1,0 +1,62 @@
+<p>Check hourly forecast for the next 5 days</p>
+<app-search-cities (HourlyDetail)="GetHourlyDetail($event)"
+  >></app-search-cities
+>
+<div *ngIf="hourlyData" class="gradient-custom-2 h-100 div-padding">
+  <div class="align-items-center h-100">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <div class="table-responsive table-fixed-header thead tr th">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Icon</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">
+                    <a (click)="changeOrderOnClick('temp')"
+                      >Temperature
+                      <i
+                        class="fa-solid fa-sort"
+                        [ngClass]="{
+                          'fa-solid fa-arrow-up': order === 'asc', 
+                          'fa-solid fa-arrow-down': order === 'desc',
+                        }"
+                      ></i>
+                    </a>
+                  </th>
+                  <th scope="col">Humidity</th>
+                  <th scope="col">Wind speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="
+                    let item of hourlyData.list | sortTable : sortColumn : order
+                  "
+                >
+                  <td>
+                    <img
+                      src="https://openweathermap.org/img/wn/{{
+                        item.weather[0].icon
+                      }}@2x.png"
+                    />
+                  </td>
+                  <td>{{ item.weather[0].description }}</td>
+                  <td>{{ item.dt_txt }}</td>
+                  <td>{{ item.main.temp | temperatureRound }}°</td>
+                  <td>{{ item.main.humidity }}</td>
+                  <td>{{ item.wind.speed }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!cityFound" class="city-not-found">
+  <p>City not found!</p>
+</div>
