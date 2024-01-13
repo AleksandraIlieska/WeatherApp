@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Getting real-time weather updates from public API: OpenWeatherMap like current weather data and weather forecast for the upcomming 5 days for the entered city. There is option to register new user using indexed db. When searching for current weather data, the user can add the entered city to favorites and therefore to manage the coresponding table of favourite cities.
 
-#Screenshots 
+# Screenshots 
 ![1](https://github.com/AleksandraIlieska/WeatherApp/assets/59208801/f290107f-15ca-4ce1-b7d4-0fe12b50523b)
 ![2](https://github.com/AleksandraIlieska/WeatherApp/assets/59208801/c3476e5f-483c-41ff-92ab-604b14c9cc99)
 ![3](https://github.com/AleksandraIlieska/WeatherApp/assets/59208801/432c7cc8-1854-4071-8efe-174e2616444d)
